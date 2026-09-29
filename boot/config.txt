@@ -1,0 +1,15 @@
+# Core hardware setup
+enable_uart=1
+arm_64bit=1
+dtoverlay=miniuart-bt
+
+# LOCK THE CLOCKS (Crucial for UART stability)
+force_turbo=1
+core_freq=250
+core_freq_min=250
+
+# Match your code's IBRD/FBRD math (48MHz)
+init_uart_clock=48000000
+
+# Prevent the firmware from loading a default kernel
+kernel=kernel8.bin
